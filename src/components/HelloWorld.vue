@@ -9,6 +9,7 @@
       >.
     </p>
     <h3>Installed CLI Plugins</h3>
+    teste 2
     <ul>
       <li>
         <a
