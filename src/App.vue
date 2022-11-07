@@ -1,30 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <section class="grid gap-4 sm:grid-cols-2 md: grid-cols-3 container mx-auto">
+    <p v-for="item in list" :key="item.id">{{ item.name }}</p>
+  </section>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  setup() {
+    const list = [
+      { id: 1, name: "Tailwind CSS" },
+      { id: 2, name: "Tailwind CSS" },
+      { id: 3, name: "Tailwind CSS" },
+      { id: 4, name: "Tailwind CSS" },
+      { id: 5, name: "Tailwind CSS" },
+      { id: 6, name: "Tailwind CSS" },
+      { id: 7, name: "Tailwind CSS" },
+      { id: 8, name: "Tailwind CSS" },
+      { id: 9, name: "Tailwind CSS" },
+    ];
 
-nav {
-  padding: 30px;
+    return { list };
+  },
+};
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="scss"></style>
