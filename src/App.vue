@@ -1,12 +1,16 @@
 <template>
-  <section class="grid gap-4 sm:grid-cols-2 md: grid-cols-3 container mx-auto">
-    <p v-for="item in list" :key="item.id">{{ item.name }}</p>
-  </section>
+  <base-container>
+    <!--     <div v-for="item in list" :key="item.id">
+      <h1>{{ item.name }}</h1>
+    </div> -->
+  </base-container>
 </template>
 
 <script>
+import BaseContainer from "./shered/BaseContainer.vue";
 export default {
-  setup() {
+  components: { BaseContainer },
+  /* setup() {
     const list = [
       { id: 1, name: "Tailwind CSS" },
       { id: 2, name: "Tailwind CSS" },
@@ -20,7 +24,7 @@ export default {
     ];
 
     return { list };
-  },
+  }, */
 };
 </script>
 
